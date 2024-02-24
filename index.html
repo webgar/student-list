@@ -9,6 +9,8 @@
 </head>
 <body>
     <div class="container p-3">
+
+        <h2>Add Student</h2>
         <form action="#" class="pb-5" id="add-form">
             <div class="mb-3">
                 <input type="text" class="form-control" id="nameInput" placeholder="Name">
@@ -31,25 +33,38 @@
             <button type="submit" class="btn btn-primary">Add student</button>
         </form>
 
-        <table class="table table-striped">
+        <h2>Filters</h2>
+        <form action="#" class="pb-5" id="filter-form">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="nameFilter" placeholder="Search by name">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="facultyFilter" placeholder="Search by faculty">
+            </div>
+            <div class="mb-3">
+                <input type="number" class="form-control" id="startYearFilter" placeholder="Start year">
+            </div>
+            <div class="mb-3">
+                <input type="number" class="form-control" id="endYearFilter" placeholder="End year">
+            </div>
+            <button type="submit" class="btn btn-primary">Apply Filters</button>
+        </form>
+
+        <h2>Student List</h2>
+        <table class="table table-striped" id="studentsTable">
             <thead>
-                <tr>
-                    <th>Full Name</th>
-                    <th>Date of birth</th>
-                    <th>Faculty</th>
-                    <th>Start of the study year</th>
+                <tr >
+                    <th  data-sort="name">Full Name</th>
+                    <th  data-sort="dob">Date of birth</th>
+                    <th  data-sort="faculty">Faculty</th>
+                    <th  data-sort="studyStart">Start of the study year</th>
                 </tr>
             </thead>
-            <tbody id="studentsTable">                
-                <tr>
-                    <td>No data available...</td>
-                    <td>No data available...</td>
-                    <td>No data available...</td>
-                    <td>No data available...</td>
-                </tr>
+            <tbody id="table-body">                
+                
             </tbody>
         </table>
     </div>
-    <script defer type="module" src="scripts/main.js"></script>
+    <script  type="module" src="scripts/main.js"></script>
 </body>
 </html>
